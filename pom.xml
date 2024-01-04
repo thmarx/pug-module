@@ -7,9 +7,9 @@
 	<packaging>pom</packaging>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<cms.version>3.3.0-SNAPSHOT</cms.version>
-	 <maven.compiler.source>21</maven.compiler.source>
-	 <maven.compiler.target>21</maven.compiler.target>
+		<cms.version>3.3.0</cms.version>
+		<maven.compiler.source>21</maven.compiler.source>
+		<maven.compiler.target>21</maven.compiler.target>
 	</properties>
 	<modules>
 		<module>module/</module>
