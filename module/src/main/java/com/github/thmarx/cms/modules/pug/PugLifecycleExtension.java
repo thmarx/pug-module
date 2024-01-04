@@ -22,6 +22,10 @@ package com.github.thmarx.cms.modules.pug;
  * #L%
  */
 
+import com.github.thmarx.cms.api.ServerProperties;
+import com.github.thmarx.cms.api.feature.features.DBFeature;
+import com.github.thmarx.cms.api.feature.features.ServerPropertiesFeature;
+import com.github.thmarx.cms.api.feature.features.ThemeFeature;
 import com.github.thmarx.cms.api.module.CMSModuleContext;
 import com.github.thmarx.modules.api.ModuleLifeCycleExtension;
 import com.github.thmarx.modules.api.annotation.Extension;
@@ -41,7 +45,11 @@ public class PugLifecycleExtension extends ModuleLifeCycleExtension<CMSModuleCon
 
 	@Override
 	public void activate() {
-		templateEngine = new PugTemplateEngine(getContext().getDb().getFileSystem(), getContext().getServerProperties(), getContext().getTheme());
+		templateEngine = new PugTemplateEngine(
+				getContext().get(DBFeature.class).db().getFileSystem(), 
+				getContext().get(ServerPropertiesFeature.class).serverProperties(), 
+				getContext().get(ThemeFeature.class).theme()
+		);
 	}
 
 	@Override
