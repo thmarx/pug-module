@@ -27,7 +27,6 @@ import com.github.thmarx.cms.api.ThemeProperties;
 import com.github.thmarx.cms.api.db.DBFileSystem;
 import com.github.thmarx.cms.api.messages.MessageSource;
 import com.github.thmarx.cms.api.template.TemplateEngine;
-import com.github.thmarx.cms.api.theme.Assets;
 import com.github.thmarx.cms.api.theme.Theme;
 import java.io.IOException;
 import java.nio.charset.Charset;
@@ -99,11 +98,6 @@ public class PugTemplateEngineNGTest {
 			@Override
 			public boolean empty() {
 				return true;
-			}
-
-			@Override
-			public Assets getAssets() {
-				throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
 			}
 
 			@Override
