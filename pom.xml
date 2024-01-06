@@ -4,7 +4,7 @@
 	<groupId>com.github.thmarx.cms.modules</groupId>
 	<artifactId>pug-module</artifactId>
 	<version>1.0.0</version>
-	<packaging>pom</packaging>
+	<packaging>jar</packaging>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<cms.version>4.0.0</cms.version>
